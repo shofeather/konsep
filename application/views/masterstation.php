@@ -11,24 +11,34 @@
 </head>
 <body>
     <div class="container">
-        <h2>Data Master Station Instr</h2>
+        <h2>Data Master Station Instr (Latest)</h2>
         <table class="table table-dark">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Nama Stasiun</th>
+                    <th>vnotch wl</th>
+                    <th>vcc</th>
+                    <th>logger temp</th>
+                    <th>datetime</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $no = 1;
+                $count = 0;
                 foreach ($Masterstation as $u) :
                     ?>
                     <tr>
                         <td><?= $no++; ?></td>
                         <td><a class="width-100 dsp_flex pointer" style="color: white; text-decoration: none;" href="<?php echo base_url('Masterstation/details/').$u['TableData'];?>"><?= $u['TableData'] ?></a></td>
+                        <td><?php echo $vnotch_wl[$count]; ?></td>
+                        <td><?php echo $vcc[$count]; ?></td>
+                        <td><?php echo $logger_temp[$count]; ?></td>
+                        <td><?php echo $datetime[$count]; ?></td>
                     </tr>
                 <?php
+                $count++;
                 endforeach;
                 ?>
             </tbody>
