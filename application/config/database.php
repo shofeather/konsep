@@ -80,9 +80,9 @@ $tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.11)(PORT
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => $tnsname,
-	'username' => 'SMSD',
-	'password' => 'SMSD',
-	'database' => 'ORCLMAINPJT1',
+	'username' => '',
+	'password' => '',
+	'database' => '',
 	'dbdriver' => 'oci8',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
