@@ -24,10 +24,15 @@ class Masterstation extends CI_Controller
         $this->load->view('masterstation', $data);
     }
 
-    public function details($tabeldata){
-        $data['Masterstation_detail'] = $this->Masterstation_model->getMasterstation_instrdetail($tabeldata);
+    public function details($tbl_detail = '')
+    {
+        $data['Masterstation_detail'] = $this->Masterstation_model->getMasterstation_instrdetail($tbl_detail);
         $this->load->view('masterstation_detail', $data);
-        // var_dump($data);
     }
 
+    public function get_detail($tbl_detail)
+    {
+        $data['Masterstation_detail'] = $this->Masterstation_model->getMasterstation_instrdetail($tbl_detail);
+        echo json_encode($data);
+    }
 }
