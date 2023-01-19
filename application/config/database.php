@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -76,13 +76,12 @@ $query_builder = TRUE;
 $tnsname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.11)(PORT = 1521))
         (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORCLMAINPJT1)))';
 
-
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => $tnsname,
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'username' => 'SMSD',
+	'password' => 'SMSD',
+	'database' => 'ORCLMAINPJT1',
 	'dbdriver' => 'oci8',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
